@@ -18,7 +18,7 @@ fetch(video_http + new URLSearchParams({
 .then(data => {
     data.items.forEach(item => {
         getChannelIcon(item);
-        console.log(item);
+        //console.log(item);
     })
 })
 .catch(err => console.log(err));
@@ -35,7 +35,7 @@ const getChannelIcon = (video_data) => {
     .then(data => {
         video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
        makeVideoCard(video_data);
-        console.log(data);
+        //console.log(data);
     })
 }
 
